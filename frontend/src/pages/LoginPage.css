@@ -1,0 +1,528 @@
+/* ============================================================
+   MINIMALIST LOGIN PAGE STYLES - CLB SINH VIÊN
+   Matches exact layout, colors, typography and structure
+   ============================================================ */
+
+.min-login-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ------------------------------------------------------------
+   HEADER
+   ------------------------------------------------------------ */
+.min-login-header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.min-login-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .min-login-header-inner {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .min-login-header-inner {
+    padding: 0 32px;
+  }
+}
+
+.min-login-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  outline: none;
+}
+
+.min-login-logo-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f97316;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.min-login-brand:hover .min-login-logo-box {
+  transform: scale(1.05);
+}
+
+.min-login-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.min-login-logo-fallback {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+}
+
+.min-login-brand-text {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+  transition: color 0.15s ease;
+}
+
+.min-login-brand:hover .min-login-brand-text {
+  color: #ea580c;
+}
+
+.min-login-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .min-login-nav {
+    gap: 24px;
+  }
+}
+
+.min-login-nav-link {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+@media (min-width: 768px) {
+  .min-login-nav-link {
+    display: inline-flex;
+  }
+}
+
+.min-login-nav-link:hover {
+  color: #ea580c;
+}
+
+.min-login-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #ea580c;
+  background-color: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+@media (min-width: 640px) {
+  .min-login-nav-btn {
+    font-size: 0.875rem;
+  }
+}
+
+.min-login-nav-btn:hover {
+  background-color: #ffedd5;
+}
+
+/* ------------------------------------------------------------
+   MAIN CONTENT & CARD
+   ------------------------------------------------------------ */
+.min-login-main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+@media (min-width: 640px) {
+  .min-login-main {
+    padding: 48px 16px;
+  }
+}
+
+.min-login-card {
+  width: 100%;
+  max-width: 460px;
+  background-color: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(226, 232, 240, 0.5), 0 8px 10px -6px rgba(226, 232, 240, 0.5);
+  padding: 32px;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .min-login-card {
+    padding: 40px;
+  }
+}
+
+.min-login-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.min-login-card-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f97316;
+  margin-bottom: 14px;
+}
+
+.min-login-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+  margin: 0;
+}
+
+.min-login-card-desc {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------------
+   ALERT BOX
+   ------------------------------------------------------------ */
+.min-login-alert {
+  margin-bottom: 24px;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #b91c1c;
+  font-size: 0.875rem;
+  animation: minFadeIn 0.2s ease;
+}
+
+.min-login-alert-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #ef4444;
+  margin-top: 2px;
+}
+
+.min-login-alert-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+@keyframes minFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------------------------------------
+   FORM & INPUTS
+   ------------------------------------------------------------ */
+.min-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .min-login-form {
+    gap: 20px;
+  }
+}
+
+.min-login-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.min-login-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.min-login-input-wrap {
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.min-login-input-icon {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  color: #94a3b8;
+}
+
+.min-login-input {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  padding: 10px 12px 10px 44px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #0f172a;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .min-login-input {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.min-login-input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.min-login-input::placeholder {
+  color: #94a3b8;
+}
+
+.min-login-input-password {
+  padding-right: 44px;
+}
+
+.min-login-toggle-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 14px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.15s ease;
+}
+
+.min-login-toggle-btn:hover {
+  color: #475569;
+}
+
+/* ------------------------------------------------------------
+   REMEMBER ME & FORGOT PASSWORD
+   ------------------------------------------------------------ */
+.min-login-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4px;
+}
+
+.min-login-checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.min-login-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+  accent-color: #f97316;
+  cursor: pointer;
+}
+
+.min-login-checkbox-text {
+  margin-left: 8px;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.min-login-forgot-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ea580c;
+  text-decoration: none;
+  transition: color 0.15s ease;
+  cursor: pointer;
+}
+
+.min-login-forgot-link:hover {
+  color: #c2410c;
+}
+
+/* ------------------------------------------------------------
+   SUBMIT BUTTON
+   ------------------------------------------------------------ */
+.min-login-submit-wrap {
+  padding-top: 8px;
+}
+
+.min-login-submit-btn {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #f97316;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: inherit;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+}
+
+@media (min-width: 640px) {
+  .min-login-submit-btn {
+    height: 48px;
+  }
+}
+
+.min-login-submit-btn:hover:not(:disabled) {
+  background-color: #ea580c;
+}
+
+.min-login-submit-btn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.min-login-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ------------------------------------------------------------
+   JOIN FOOTER IN CARD
+   ------------------------------------------------------------ */
+.min-login-card-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.min-login-join-link {
+  font-weight: 600;
+  color: #ea580c;
+  margin-left: 4px;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.min-login-join-link:hover {
+  color: #c2410c;
+}
+
+/* ------------------------------------------------------------
+   PAGE FOOTER
+   ------------------------------------------------------------ */
+.min-login-footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(226, 232, 240, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.min-login-footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  font-size: 0.75rem;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+@media (min-width: 640px) {
+  .min-login-footer-inner {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.min-login-footer-dot {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .min-login-footer-dot {
+    display: inline;
+  }
+}
+
+.min-login-footer-link {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.min-login-footer-link:hover {
+  color: #ea580c;
+}

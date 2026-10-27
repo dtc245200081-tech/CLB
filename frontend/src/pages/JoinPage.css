@@ -1,0 +1,580 @@
+/* ============================================================
+   MINIMALIST REGISTRATION / JOIN PAGE STYLES - CLB SINH VIÊN
+   Matches exact layout, colors, typography and structure
+   ============================================================ */
+
+.min-join-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ------------------------------------------------------------
+   HEADER
+   ------------------------------------------------------------ */
+.min-join-header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.min-join-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .min-join-header-inner {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .min-join-header-inner {
+    padding: 0 32px;
+  }
+}
+
+.min-join-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  outline: none;
+}
+
+.min-join-logo-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f97316;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.min-join-brand:hover .min-join-logo-box {
+  transform: scale(1.05);
+}
+
+.min-join-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.min-join-brand-text {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+  transition: color 0.15s ease;
+}
+
+.min-join-brand:hover .min-join-brand-text {
+  color: #ea580c;
+}
+
+.min-join-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .min-join-nav {
+    gap: 24px;
+  }
+}
+
+.min-join-nav-link {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+@media (min-width: 768px) {
+  .min-join-nav-link {
+    display: inline-flex;
+  }
+}
+
+.min-join-nav-link:hover {
+  color: #ea580c;
+}
+
+.min-join-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #ea580c;
+  background-color: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+@media (min-width: 640px) {
+  .min-join-nav-btn {
+    font-size: 0.875rem;
+  }
+}
+
+.min-join-nav-btn:hover {
+  background-color: #ffedd5;
+}
+
+/* ------------------------------------------------------------
+   MAIN CONTENT & CARD
+   ------------------------------------------------------------ */
+.min-join-main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+@media (min-width: 640px) {
+  .min-join-main {
+    padding: 48px 16px;
+  }
+}
+
+.min-join-card {
+  width: 100%;
+  max-width: 580px;
+  background-color: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(226, 232, 240, 0.5), 0 8px 10px -6px rgba(226, 232, 240, 0.5);
+  padding: 28px 24px;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .min-join-card {
+    padding: 40px;
+  }
+}
+
+.min-join-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.min-join-card-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f97316;
+  margin-bottom: 14px;
+}
+
+.min-join-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+  margin: 0;
+}
+
+.min-join-card-desc {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------------
+   ALERT BOX
+   ------------------------------------------------------------ */
+.min-join-alert {
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #b91c1c;
+  font-size: 0.875rem;
+  animation: minFadeIn 0.2s ease;
+}
+
+.min-join-alert-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #ef4444;
+  margin-top: 2px;
+}
+
+.min-join-alert-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+@keyframes minFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------------------------------------
+   FORM & INPUTS
+   ------------------------------------------------------------ */
+.min-join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.min-join-row-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .min-join-row-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+.min-join-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.min-join-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.min-join-req {
+  color: #f43f5e;
+  margin-left: 2px;
+}
+
+.min-join-input-wrap {
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.min-join-input-icon {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  color: #94a3b8;
+}
+
+.min-join-input {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  padding: 10px 12px 10px 42px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #0f172a;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.min-join-input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.min-join-input::placeholder {
+  color: #94a3b8;
+}
+
+.min-join-input-uppercase {
+  text-transform: uppercase;
+}
+
+.min-join-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.min-join-textarea {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  padding: 12px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #0f172a;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.min-join-textarea:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.min-join-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.min-join-char-counter {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.min-join-char-counter-warn {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.min-join-input-password {
+  padding-right: 44px;
+}
+
+.min-join-toggle-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 14px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.15s ease;
+}
+
+.min-join-toggle-btn:hover {
+  color: #475569;
+}
+
+/* ------------------------------------------------------------
+   TERMS CHECKBOX
+   ------------------------------------------------------------ */
+.min-join-terms-wrap {
+  padding-top: 4px;
+}
+
+.min-join-checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.min-join-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+  accent-color: #f97316;
+  cursor: pointer;
+}
+
+.min-join-checkbox-text {
+  margin-left: 8px;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+/* ------------------------------------------------------------
+   SUBMIT BUTTON
+   ------------------------------------------------------------ */
+.min-join-submit-wrap {
+  padding-top: 8px;
+}
+
+.min-join-submit-btn {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #f97316;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: inherit;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+}
+
+@media (min-width: 640px) {
+  .min-join-submit-btn {
+    height: 48px;
+  }
+}
+
+.min-join-submit-btn:hover:not(:disabled) {
+  background-color: #ea580c;
+}
+
+.min-join-submit-btn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.min-join-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ------------------------------------------------------------
+   CARD FOOTER
+   ------------------------------------------------------------ */
+.min-join-card-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.min-join-login-link {
+  font-weight: 600;
+  color: #ea580c;
+  margin-left: 4px;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.min-join-login-link:hover {
+  color: #c2410c;
+}
+
+/* ------------------------------------------------------------
+   PAGE FOOTER
+   ------------------------------------------------------------ */
+.min-join-footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(226, 232, 240, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.min-join-footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  font-size: 0.75rem;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+@media (min-width: 640px) {
+  .min-join-footer-inner {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.min-join-footer-dot {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .min-join-footer-dot {
+    display: inline;
+  }
+}
+
+.min-join-footer-link {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.min-join-footer-link:hover {
+  color: #ea580c;
+}
+
+/* ------------------------------------------------------------
+   SUCCESS CARD
+   ------------------------------------------------------------ */
+.min-join-success-card {
+  text-align: center;
+  padding: 36px 20px;
+}
+
+.min-join-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #ecfdf5;
+  color: #10b981;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}

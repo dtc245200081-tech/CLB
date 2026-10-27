@@ -1,0 +1,38 @@
+# ============================================================
+# CẤU HÌNH GHI ĐÈ PHỤC VỤ PHÁT TRIỂN (DEVELOPMENT HOT RELOAD)
+# Khởi chạy: docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+# ============================================================
+services:
+  db:
+    ports:
+      - "${HOST_PORT_DB:-5432}:5432"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: development
+    container_name: clb_backend_dev
+    ports:
+      - "${HOST_PORT_BACKEND:-8000}:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - DEBUG=True
+      - ENV_MODE=development
+    command: /app/scripts/start-dev.sh
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: development
+    container_name: clb_frontend_dev
+    ports:
+      - "${HOST_PORT_FRONTEND:-3000}:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=/api
+    command: npm run dev -- --host 0.0.0.0 --port 3000
